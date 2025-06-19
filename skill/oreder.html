@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f7ff;
+      text-align: center;
+      padding: 50px;
+    }
+    .confirmation-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .order-number {
+      font-size: 2em;
+      color: #008000;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .checkmark {
+      font-size: 3em;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="confirmation-box">
+    <div class="checkmark">✔</div>
+    <h1>Order Confirmed!</h1>
+    <p>Thank you for your purchase.</p>
+    <p>Your order number is:</p>
+    <div class="order-number" id="orderNumber">####</div>
+  </div>
+
+  <script>
+    // Generate a random 4-digit order number
+    const orderNumber = Math.floor(1000 + Math.random() * 9000);
+    document.getElementById("orderNumber").textContent = orderNumber;
+  </script>
+</body>
+</html>
